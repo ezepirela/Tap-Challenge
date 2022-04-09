@@ -11,7 +11,7 @@ export class GameService {
 
     public async saveNewGame(saveNewGame: SaveGameDTO): Promise<Game> {
         try {
-            const newGame = await new this.gameModel(saveNewGame).save()
+            const newGame = await this.gameModel.create(saveNewGame)
             if (!newGame) {
                 throw new HttpException('Failed to save new game', 400)
             }
