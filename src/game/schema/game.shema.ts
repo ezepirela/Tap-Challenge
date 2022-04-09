@@ -6,6 +6,8 @@ import { State } from '../dto/save-game.dto'
 export type GameDocument = Game & Document
 @Schema({ collection: 'game' })
 export class Game {
+    id: string
+
     @Prop({ required: true, default: new Date().toISOString() })
     created: string
 
