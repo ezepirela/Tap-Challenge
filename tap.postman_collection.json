@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "5efb497b-ce5a-4611-9c36-3f6574170a5a",
+		"name": "tap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"state\": {\r\n        \"code\": 3,\r\n        \"description\": \"LOST\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get game by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/game/6250f9e086d20a12483be490",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"game",
+						"6250f9e086d20a12483be490"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/game/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"game",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
